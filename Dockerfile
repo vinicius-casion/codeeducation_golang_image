@@ -4,5 +4,5 @@ COPY ./hello.go .
 RUN go build hello.go
 
 FROM scratch
-COPY --from=builder /go/src/hello ./
-RUN ./hello
+COPY --from=builder ./src/ .
+ENTRYPOINT [ "./hello" ]
