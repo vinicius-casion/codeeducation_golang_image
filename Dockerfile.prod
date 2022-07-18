@@ -1,9 +1,0 @@
-FROM golang AS builder
-COPY ./hello.go .
-
-ENTRYPOINT ["go", "run", "./hello.go" ]
-
-FROM scratch
-COPY ./hello .
-
-ENTRYPOINT ["./hello" ]
