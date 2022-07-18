@@ -1,4 +1,4 @@
-FROM scratch
-COPY ./hello .
+FROM golang
+COPY ./hello.go .
 
-ENTRYPOINT ["./hello" ]
+ENTRYPOINT ["go", "run", "./hello.go" ]
